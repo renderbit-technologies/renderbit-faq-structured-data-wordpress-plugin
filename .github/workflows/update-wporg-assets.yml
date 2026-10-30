@@ -1,0 +1,24 @@
+name: Update WordPress.org assets
+
+# Manually publishes only the .wordpress-org/ images (icon, banner, screenshots) to the plugin's
+# WordPress.org SVN assets directory, so listing artwork can change without a plugin release.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  assets:
+    runs-on: ubuntu-latest
+    environment: wordpress-org
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Update WordPress.org SVN assets
+        uses: 10up/action-wordpress-plugin-asset-update@2480306f6f693672726d08b5917ea114cb2825f7 # 2.2.0
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: renderbit-faq-structured-data
+          IGNORE_OTHER_FILES: true
