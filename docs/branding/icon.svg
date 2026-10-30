@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <!-- speech bubble -->
+  <path d="M60 52h136a20 20 0 0 1 20 20v84a20 20 0 0 1-20 20h-74l-40 34v-34H60a20 20 0 0 1-20-20V72a20 20 0 0 1 20-20z" fill="#fff"/>
+  <!-- curly braces -->
+  <g fill="none" stroke="#4f46e5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M98 84c-14 0-14 6-14 18s-2 14-10 14c8 0 10 2 10 14s0 18 14 18"/>
+    <path d="M158 84c14 0 14 6 14 18s2 14 10 14c-8 0-10 2-10 14s0 18-14 18"/>
+  </g>
+  <!-- question mark -->
+  <text x="128" y="148" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="700" font-size="76" fill="#1e1b4b">?</text>
+</svg>
