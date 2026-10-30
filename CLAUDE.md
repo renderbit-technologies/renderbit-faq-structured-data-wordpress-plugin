@@ -52,6 +52,7 @@ Admin JS (`assets/js/rfsd-admin.js`, `rfsd-health.js`) uses jQuery and a bundled
 - Options that are rarely read (`rfsd_invalidation_log`, `rfsd_last_queue_run`) are written with `rfsd_update_option_no_autoload()` so they stay out of autoload.
 - CI runs `php -l` on PHP 7.2–8.4, and PHPUnit on WP 6.5 plus the locked version.
 - Public filters: `rfsd_question_text`, `rfsd_answer_text` (both must return plain text), `rfsd_uninstall_delete_faqs`.
+- WordPress.org listing images (icon and banner PNGs) live in `.wordpress-org/`, which `deploy-wporg.yml` publishes to the SVN `assets` directory on each release. Their editable SVG sources are in `docs/branding/`.
 - `.gitattributes` `export-ignore` decides what ships (`git archive` builds both the zip and the WordPress.org SVN deploy). Add new dev-only files there.
 
 ## Releasing
