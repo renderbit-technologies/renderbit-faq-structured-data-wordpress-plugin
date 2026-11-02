@@ -21,6 +21,8 @@ composer build-zip && composer check-zip              # release zip from `git ar
 composer bump-patch                # or bump-minor / bump-major
 ```
 
+In Claude Code cloud sessions, `.claude/hooks/session-start.sh` installs Composer/npm dependencies and MariaDB **in the background** (a cold Composer install takes ~10 minutes). Before running `composer lint`/`composer test`/`npm test`, check that `/tmp/rfsd-session-setup.done` exists; if not, `tail /tmp/rfsd-session-setup.log` and wait for it, rather than running `composer install` yourself.
+
 PHPUnit runs against a real MySQL/MariaDB database that the suite **wipes on every run**. Settings come from `.env.testing` (copy `.env.testing.example`); shell env vars win. Tests are loaded by `tests/php/bootstrap.php`, which loads the plugin on `muplugins_loaded` and calls `rfsd_activate()` on `init`. Extend `RFSD_TestCase` (`tests/php/class-rfsd-testcase.php`, has `create_faq()` helpers) or `RFSD_Multisite_TestCase`. Tag network-only tests `@group ms-required` and single-site-only tests `@group ms-excluded`; each config excludes the other group. PHPUnit converts notices, warnings and deprecations to failures. WP-CLI is stubbed in `tests/php/stubs/class-wp-cli.php`.
 
 ## Architecture
