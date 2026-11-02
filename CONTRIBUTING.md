@@ -46,7 +46,7 @@ Tests live in `tests/js`.
 
 ## Releasing
 
-The plugin is published on WordPress.org as `renderbit-faq-structured-data`. The shipped files are whatever `git archive` produces, so `.gitattributes` decides what reaches both the release zip and WordPress.org SVN.
+The plugin is published on WordPress.org as `renderbit-faq-structured-data` (https://wordpress.org/plugins/renderbit-faq-structured-data/). The shipped files are whatever `git archive` produces, so `.gitattributes` decides what reaches both the release zip and WordPress.org SVN.
 
 1. Run `composer bump-patch` (or `bump-minor`, `bump-major`). It runs `bin/bump-version.php`, which sets the new version in `composer.json`, the `Version` header and `RFSD_VERSION` in `renderbit-faq-structured-data.php`, and `Stable tag` in `readme.txt`, then refreshes the `composer.lock` hash. Add a `readme.txt` changelog entry and bump `Tested up to` when needed.
 2. Merge to `main`, then push a `vX.Y.Z` tag. `draft-release.yml` builds the zip and creates a draft GitHub release.
