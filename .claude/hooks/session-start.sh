@@ -16,7 +16,7 @@ fi
 # Tell Claude Code to run the rest of this hook in the background (30 min cap).
 echo '{"async": true, "asyncTimeout": 1800000}'
 
-cd "${CLAUDE_PROJECT_DIR:-$(pwd)}"
+cd "${CLAUDE_PROJECT_DIR:-$(pwd)}" || exit 1
 
 LOG=/tmp/rfsd-session-setup.log
 DONE=/tmp/rfsd-session-setup.done
