@@ -1,6 +1,6 @@
 # Renderbit FAQ Structured Data
 
-![WordPress Plugin](https://img.shields.io/badge/WordPress-Plugin-21759B?logo=wordpress&logoColor=fff)
+[![WordPress Plugin](https://img.shields.io/badge/WordPress-Plugin-21759B?logo=wordpress&logoColor=fff)](https://wordpress.org/plugins/renderbit-faq-structured-data/)
 ![PHP](https://img.shields.io/badge/PHP-%E2%89%A5%207.2-777BB4?logo=php&logoColor=fff)
 ![MySQL](https://img.shields.io/badge/MySQL-Mapping%20Table-4479A1?logo=mysql&logoColor=fff)
 ![WP-Cron](https://img.shields.io/badge/Background-WP--Cron%20Queue-orange)
@@ -23,7 +23,13 @@ A WordPress plugin to manage FAQ items as a custom post type (CPT) and inject FA
 
 ## Installation
 
-1. Copy the plugin folder to your WordPress `wp-content/plugins/` directory.
+The plugin is available on WordPress.org: <https://wordpress.org/plugins/renderbit-faq-structured-data/>
+
+**From the WordPress admin (recommended):** go to Plugins > Add New, search for "Renderbit FAQ Structured Data", then install and activate it.
+
+**Manually:**
+
+1. Download the plugin from [WordPress.org](https://wordpress.org/plugins/renderbit-faq-structured-data/) (or build a zip with `composer build-zip`) and copy the folder to your WordPress `wp-content/plugins/` directory.
 2. Activate via the WordPress admin Plugins page.
 3. On activation, the mapping table is created automatically.
 

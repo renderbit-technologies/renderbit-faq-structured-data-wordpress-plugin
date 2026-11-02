@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-WordPress plugin (slug `renderbit-faq-structured-data`, published on WordPress.org) that manages FAQs as a `rfsd_faq` custom post type (`RFSD_POST_TYPE`) and prints schema.org `FAQPage` JSON-LD in `wp_head` on the singular posts/pages each FAQ is mapped to. Procedural PHP, every function prefixed `rfsd_`; no build step and no runtime Composer dependencies. Supports WordPress 6.5+ and PHP 7.2+, so don't use syntax newer than PHP 7.2 in shipped code.
+WordPress plugin (slug `renderbit-faq-structured-data`, published on [WordPress.org](https://wordpress.org/plugins/renderbit-faq-structured-data/)) that manages FAQs as a `rfsd_faq` custom post type (`RFSD_POST_TYPE`) and prints schema.org `FAQPage` JSON-LD in `wp_head` on the singular posts/pages each FAQ is mapped to. Procedural PHP, every function prefixed `rfsd_`; no build step and no runtime Composer dependencies. Supports WordPress 6.5+ and PHP 7.2+, so don't use syntax newer than PHP 7.2 in shipped code.
 
 ## Commands
 
