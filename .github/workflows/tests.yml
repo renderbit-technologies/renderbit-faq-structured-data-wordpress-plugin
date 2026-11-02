@@ -48,8 +48,14 @@ jobs:
 
       - uses: ramsey/composer-install@65e4f84970763564f46a70b8a54b90d033b3bdda # 4.0.0
 
+      # The full report gives a readable list of violations in the log; the checkstyle file feeds cs2pr,
+      # which turns the same violations into PR annotations even when PHPCS fails the step.
       - name: Run PHPCS
-        run: vendor/bin/phpcs -q --report=checkstyle | cs2pr
+        run: vendor/bin/phpcs -q --report-full --report-checkstyle=phpcs-report.xml
+
+      - name: Annotate PHPCS violations
+        if: ${{ always() && hashFiles('phpcs-report.xml') != '' }}
+        run: cs2pr phpcs-report.xml
 
   plugin-check:
     name: Plugin Check
